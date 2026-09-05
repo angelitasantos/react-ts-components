@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/PublicPages/HomePage';
+import { ROUTES } from './constants';
+import './App.css';
+
+const CatalogPage = () => <div>Catálogo Completo</div>;
+const ActionsPage = () => <div>Página de Ações</div>;
+const ContentPage = () => <div>Página de Conteúdo</div>;
+const DateFieldPage = () => <div>Página de Data</div>;
+const FieldsPage = () => <div>Página de Campos</div>;
+const LinesPage = () => <div>Página de Linhas</div>;
+const NavigationPage = () => <div>Página de Navegação</div>;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const basename = import.meta.env.BASE_URL;
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter basename={basename}>
+      <Routes>
+        <Route path={ROUTES.HOME} element={<HomePage />} />
+        <Route path={ROUTES.CATALOG} element={<CatalogPage />} />
+        
+        <Route path={ROUTES.EXAMPLES.ACTIONS} element={<ActionsPage />} />
+        <Route path={ROUTES.EXAMPLES.FIELDS} element={<FieldsPage />} />
+        <Route path={ROUTES.EXAMPLES.DATE} element={<DateFieldPage />} />
+        <Route path={ROUTES.EXAMPLES.CONTENT} element={<ContentPage />} />
+        <Route path={ROUTES.EXAMPLES.LINES} element={<LinesPage />} />
+        <Route path={ROUTES.EXAMPLES.NAVIGATION} element={<NavigationPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
