@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HomePage } from './pages/PublicPages/HomePage';
+import { HomePage, NotFoundPage } from './pages/PublicPages';
 import { ROUTES } from './constants';
 import './App.css';
 
@@ -26,6 +26,8 @@ function App() {
         <Route path={ROUTES.EXAMPLES.CONTENT} element={<ContentPage />} />
         <Route path={ROUTES.EXAMPLES.LINES} element={<LinesPage />} />
         <Route path={ROUTES.EXAMPLES.NAVIGATION} element={<NavigationPage />} />
+
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
