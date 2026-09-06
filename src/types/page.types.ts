@@ -1,17 +1,9 @@
-export type PublicPageConfig = {
+export type PageConfig = {
   eyebrow: string;
   title: string;
   description: string;
 };
 
-export type ExamplePageConfig = {
-  eyebrow: string;
-  title: string;
-  description: string;
-};
-
-export type ComponentPageConfig = {
-  eyebrow: string;
-  title: string;
-  description: string;
-};
+export type PublicPageConfig = PageConfig;
+export type ExamplePageConfig = PageConfig;
+export type ComponentPageConfig = PageConfig;

@@ -28,7 +28,13 @@ export function getComponentHeader(componentName: string): ComponentHeader {
 }
 
 export function getPageHeader(page: PublicHeaderKey) {
-  return PUBLIC_HEADERS[page];
+  const header = PUBLIC_HEADERS[page];
+  
+  return {
+    eyebrow: header?.eyebrow || '',
+    title: header?.title || 'Página',
+    description: header?.description || '',
+  };
 }
 
 export function getHeader(
