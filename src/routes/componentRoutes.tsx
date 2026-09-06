@@ -1,0 +1,67 @@
+import { RouteObject } from 'react-router-dom';
+import { ROUTES } from '../constants';
+import {
+  AccordionPage,
+  ActionLinePage,
+  BreadcrumbsPage,
+  ButtonPage,
+  CardPage,
+  CarouselPage,
+  CheckboxPage,
+  DateFieldPageComponent,
+  FileFieldPage,
+  FixedFooterPage,
+  ListPage,
+  ModalPage,
+  MoneyFieldPage,
+  NavbarPage,
+  NavigationLinePage,
+  PaginatorPage,
+  RadioButtonPage,
+  SearchFieldPage,
+  SelectFieldPage,
+  SelectionButtonsPage,
+  SidebarPage,
+  SimpleLinePage,
+  StepperPage,
+  SwitchButtonPage,
+  TablePage,
+  TabularLinePage,
+  TextAreaFieldPage,
+  TextFieldPage
+} from '../pages/ComponentsPage';
+
+export const componentRoutes: RouteObject[] = [
+  { path: ROUTES.COMPONENTS.BUTTON, element: <ButtonPage /> },
+  { path: ROUTES.COMPONENTS.CHECKBOX, element: <CheckboxPage /> },
+  { path: ROUTES.COMPONENTS.RADIO_BUTTON, element: <RadioButtonPage /> },
+  { path: ROUTES.COMPONENTS.SELECTION_BUTTONS, element: <SelectionButtonsPage /> },
+  { path: ROUTES.COMPONENTS.SWITCH_BUTTON, element: <SwitchButtonPage /> },
+  
+  { path: ROUTES.COMPONENTS.DATE_FIELD, element: <DateFieldPageComponent /> },
+  { path: ROUTES.COMPONENTS.FILE_FIELD, element: <FileFieldPage /> },
+  { path: ROUTES.COMPONENTS.MONEY_FIELD, element: <MoneyFieldPage /> },
+  { path: ROUTES.COMPONENTS.SEARCH_FIELD, element: <SearchFieldPage /> },
+  { path: ROUTES.COMPONENTS.SELECT_FIELD, element: <SelectFieldPage /> },
+  { path: ROUTES.COMPONENTS.TEXT_FIELD, element: <TextFieldPage /> },
+  { path: ROUTES.COMPONENTS.TEXT_AREA_FIELD, element: <TextAreaFieldPage /> },
+  
+  { path: ROUTES.COMPONENTS.ACCORDION, element: <AccordionPage /> },
+  { path: ROUTES.COMPONENTS.CARD, element: <CardPage /> },
+  { path: ROUTES.COMPONENTS.CAROUSEL, element: <CarouselPage /> },
+  { path: ROUTES.COMPONENTS.LIST, element: <ListPage /> },
+  { path: ROUTES.COMPONENTS.MODAL, element: <ModalPage /> },
+  { path: ROUTES.COMPONENTS.TABLE, element: <TablePage /> },
+  
+  { path: ROUTES.COMPONENTS.BREADCRUMBS, element: <BreadcrumbsPage /> },
+  { path: ROUTES.COMPONENTS.FIXED_FOOTER, element: <FixedFooterPage /> },
+  { path: ROUTES.COMPONENTS.NAVBAR, element: <NavbarPage /> },
+  { path: ROUTES.COMPONENTS.PAGINATOR, element: <PaginatorPage /> },
+  { path: ROUTES.COMPONENTS.SIDEBAR, element: <SidebarPage /> },
+  { path: ROUTES.COMPONENTS.STEPPER, element: <StepperPage /> },
+  
+  { path: ROUTES.COMPONENTS.ACTION_LINE, element: <ActionLinePage /> },
+  { path: ROUTES.COMPONENTS.NAVIGATION_LINE, element: <NavigationLinePage /> },
+  { path: ROUTES.COMPONENTS.SIMPLE_LINE, element: <SimpleLinePage /> },
+  { path: ROUTES.COMPONENTS.TABULAR_LINE, element: <TabularLinePage /> },
+];
