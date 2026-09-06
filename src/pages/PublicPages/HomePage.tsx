@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
-import { categories } from '../../constants';
+import { PageHeader } from '../../components';
+import { getPageHeader } from '../../utils';
+import { ROUTES, categories } from '../../constants';
 import '../Pages.css';
 
 export function HomePage() {
   return (
     <main className='page'>
-      <header className='page-header'>
-        <p className='page-header__eyebrow'>React + TypeScript</p>
-        <h1>Design System Web</h1>
-        <p>Biblioteca de componentes reutilizáveis para criação de interfaces consistentes.</p>
-      </header>
+      <PageHeader {...getPageHeader('home')} />
 
       <section className='component-grid' aria-label='Categorias de componentes'>
         {categories.map((category) => (
@@ -30,7 +28,7 @@ export function HomePage() {
         <h2>Catálogo completo</h2>
         <p>Consulte todos os componentes disponíveis e acesse exemplos individuais quando necessário.</p>
 
-        <Link to='/catalog' className='home-info__link'>Ver catálogo completo</Link>
+        <Link to={ROUTES.CATALOG} className='home-info__link'>Ver catálogo completo</Link>
       </section>
     </main>
   );
