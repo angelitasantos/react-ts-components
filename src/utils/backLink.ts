@@ -27,12 +27,12 @@ export const BACK_LINK_CONFIG = {
     label: 'Voltar para Conteúdo',
   },
   dateField: {
-    to: ROUTES.EXAMPLES.FIELDS,
-    label: 'Voltar para Campos',
+    to: ROUTES.EXAMPLES.DATE,
+    label: 'Voltar para DateField',
   },
   fields: {
-    to: ROUTES.EXAMPLES.DATE,
-    label: 'Voltar para Campos',
+    to: ROUTES.EXAMPLES.FIELDS,
+    label: 'Voltar para Campos de Formulário',
   },
   lines: {
     to: ROUTES.EXAMPLES.LINES,
