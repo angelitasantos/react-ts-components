@@ -1,0 +1,120 @@
+/* ============================================
+   PAGEHEADER
+   ============================================ */
+
+.page-header {
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+
+.page-header__eyebrow {
+  margin: 0 0 8px;
+  color: #059669;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-header h1 {
+  margin: 0 0 12px;
+  color: #1a1a1a;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.page-header p {
+  margin: 0;
+  color: #0d0f12;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* ========================================================================================
+   MEDIA QUERIES - Responsividade Completa
+   ======================================================================================== */
+
+@media (max-width: 1024px) {
+  .page-header {
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .page-header__eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .page-header h1 {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 8px;
+  }
+
+  .page-header p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    margin-bottom: 20px;
+  }
+
+  .page-header__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  .page-header h1 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 768px) {
+  .page-header {
+    margin-bottom: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-header h1 {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .page-header h1 {
+    background: linear-gradient(135deg, #34d399 0%, #6ee7b7 50%, #fb923c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .page-header p {
+    color: #a0a0a0;
+  }
+
+  .page-header__eyebrow {
+    color: #34d399;
+  }
+}
