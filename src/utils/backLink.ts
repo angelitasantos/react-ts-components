@@ -15,11 +15,38 @@ export const BACK_LINK_CONFIG = {
   },
   component: {
     to: ROUTES.CATALOG,
-    label: 'Voltar ao catálogo',
+    label: 'Voltar para Catálogo',
+  },
+
+  actions: {
+    to: ROUTES.EXAMPLES.ACTIONS,
+    label: 'Voltar para Ações',
+  },
+  content: {
+    to: ROUTES.EXAMPLES.CONTENT,
+    label: 'Voltar para Conteúdo',
+  },
+  dateField: {
+    to: ROUTES.EXAMPLES.FIELDS,
+    label: 'Voltar para Campos',
+  },
+  fields: {
+    to: ROUTES.EXAMPLES.DATE,
+    label: 'Voltar para Campos',
+  },
+  lines: {
+    to: ROUTES.EXAMPLES.LINES,
+    label: 'Voltar para Linhas',
+  },
+  navigation: {
+    to: ROUTES.EXAMPLES.NAVIGATION,
+    label: 'Voltar para Navegação',
   },
 } as const;
 
-export function getBackLinkConfig(page?: 'catalog' | 'examples' | 'component' | 'default') {
+export type BackLinkPageKey = keyof typeof BACK_LINK_CONFIG;
+
+export function getBackLinkConfig(page?: BackLinkPageKey) {
   const config = BACK_LINK_CONFIG[page || 'default'];
   return {
     to: config.to,
