@@ -13,10 +13,10 @@ export function CatalogPage() {
       {componentCategories.map((category) => (
         <section
           key={category.id}
-          className='component-category'
+          className='component-section'
           aria-labelledby={`category-${category.id}`}
         >
-          <header className='component-category__header'>
+          <header className='component-section__header'>
             <h2 id={`category-${category.id}`}>{category.title}</h2>
             <p>{category.description}</p>
           </header>
